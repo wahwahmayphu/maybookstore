@@ -1,4 +1,4 @@
-Bookstore Application
+
 This is a Spring Boot application for managing a bookstore. It provides functionality to add, edit, delete, and search for books, as well as display available books.
 
 Features
