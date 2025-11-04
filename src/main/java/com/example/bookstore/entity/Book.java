@@ -36,9 +36,6 @@ public class Book {
     @JoinColumn(name = "author_id")
     private Author author;
 
-
-
-
     @Override
     public String toString() {
         return "Book{" +
@@ -49,7 +46,5 @@ public class Book {
                 ", author=" + author +
                 '}';
     }
-
-
 
 }

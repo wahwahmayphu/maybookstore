@@ -12,16 +12,10 @@ import java.util.List;
 public class BookListService {
     @Autowired
     private BookListRepository bookListRepository;
-
     public void save(BookList bookList) {
         bookListRepository.save(bookList);
     }
-
     public List<BookList> getAllBookList() {
         return bookListRepository.findAll();
     }
-//    public void deleteBook(long id){
-//        bookListRepository.deleteById(id);
-//    }
-
 }

@@ -25,6 +25,4 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
         //@Query("select b from Book b where b.title = ?1")
     List<Book> findByTitleContainingIgnoreCase(String title);
-
-
 }

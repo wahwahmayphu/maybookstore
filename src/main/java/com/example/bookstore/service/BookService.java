@@ -21,25 +21,6 @@ public class BookService {
     @Autowired
     private AuthorRepository authorRepository;
 
-//    public List<Book> searchBooks(String keyword) {
-//        if (keyword == null || keyword.trim().isEmpty()) {
-//            return bookRepository.findAll();
-//        }
-//        return bookRepository.findBookByTitle(keyword.trim());
-//    }
-
-    //2
-    /*public List<Book> search(String title) {
-        if(title == null || title.trim().equals("")){
-            return bookRepository.findAll();
-        }
-            return bookRepository.findByTitleContainingIgnoreCase(title);
-    }
-    */
-
-
-
-
     public List<Author> getAllAuthors() {
         return authorRepository.findAll();
     }
@@ -48,17 +29,14 @@ public class BookService {
         return authorRepository.findByName(author);
     }
 
-//3
+
     public List<Book> getAllBooks(){
         return bookRepository.findAll();
     }
 
-//3
     public List<Book> getByTitle(String title) {
         return bookRepository.findByTitleContainingIgnoreCase(title);
     }
-
-
 
     public List<Book> getAllBookDto(BookDto bookDto){
         return bookRepository.findAll();
@@ -84,7 +62,5 @@ public class BookService {
     public void deleteBookById(long id){
         bookRepository.deleteById(id);
     }
-
-
 
 }

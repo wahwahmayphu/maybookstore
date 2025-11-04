@@ -1,6 +1,5 @@
 package com.example.bookstore.entity;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -21,14 +20,14 @@ public class BookList {
     @Id
     private Long id;
     private String title;
-    private String author; //to change author
+    private String author;
     private double price;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate publicationDate;
 
     public BookList(String title, Author author, double price, LocalDate publicationDate) {
         this.title = title;
-        this.author = String.valueOf(author);// to change author
+        this.author = String.valueOf(author);
         this.price = price;
         this.publicationDate = publicationDate;
     }

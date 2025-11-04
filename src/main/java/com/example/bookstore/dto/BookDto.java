@@ -1,13 +1,7 @@
 package com.example.bookstore.dto;
 
-
-import com.example.bookstore.entity.Author;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,8 +19,7 @@ public class BookDto {
     @NotEmpty(message = "Title is required")
     private String title;
 
-
-    private String author; // to change author
+    private String author;
 
     @NotNull(message = "Price is required")
     private double price;
@@ -45,7 +38,7 @@ public class BookDto {
                 '}';
     }
 
-    public void setAuthor(String author) { // to change author
-        this.author = author;// to change author
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
